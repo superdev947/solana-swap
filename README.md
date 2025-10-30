@@ -1,52 +1,143 @@
-# `solana/swap`
+# Solana Swap
 
-<!-- @TODO -->
+A decentralized token swap application built on Solana blockchain, featuring integrations with multiple DEX protocols including Orca, Serum, and Raydium.
 
-Coming soon.
+![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)
+![Version](https://img.shields.io/badge/version-0.9.4-green.svg)
 
-# Getting Started with Create React App
+## 🌟 Features
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- **Multi-DEX Integration**: Swap tokens using Orca, Serum, and Raydium protocols
+- **Wallet Support**: Compatible with 12+ Solana wallets including Phantom, Solflare, Slope, Ledger, and more
+- **Real-time Quotes**: Get live price quotes before executing swaps
+- **Material-UI Design**: Modern, responsive interface with dark theme
+- **Type-Safe**: Built with TypeScript for enhanced reliability and developer experience
 
-## Available Scripts
+## 🚀 Getting Started
 
-In the project directory, you can run:
+### Prerequisites
 
-### `yarn start`
+- Node.js (v12 or higher)
+- npm or yarn package manager
+- A Solana wallet (Phantom, Solflare, etc.)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Installation
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. Clone the repository:
+```bash
+git clone https://github.com/superdev947/solana-swap.git
+cd solana-swap
+```
 
-### `yarn test`
+2. Install dependencies:
+```bash
+yarn install
+# or
+npm install
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. Start the development server:
+```bash
+yarn start
+# or
+npm start
+```
 
-### `yarn build`
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🏗️ Project Structure
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+solana-swap/
+├── public/              # Static assets
+├── src/
+│   ├── components/      # React components
+│   │   ├── OrcaSendTransaction.tsx    # Orca DEX integration
+│   │   ├── SendTransaction.tsx        # Generic swap component
+│   │   └── SerumSendTransaction.tsx   # Serum DEX integration
+│   ├── pages/
+│   │   └── Dapp.tsx    # Main application page
+│   ├── hooks/          # Custom React hooks
+│   ├── serum/          # Serum protocol utilities
+│   │   ├── context/    # React context providers
+│   │   ├── models/     # Data models
+│   │   ├── utils/      # Utility functions
+│   │   └── wallet-adapters/  # Wallet integration
+│   ├── raydium/        # Raydium protocol utilities
+│   │   ├── store/      # State management
+│   │   └── utils/      # Helper functions
+│   ├── assets/         # Images and static files
+│   └── App.tsx         # Root component
+├── craco.config.js     # Create React App Configuration
+├── tsconfig.json       # TypeScript configuration
+└── package.json        # Project dependencies
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🔧 Build
 
-### `yarn eject`
+Create a production build:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```bash
+yarn build
+# or
+npm run build
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The optimized build will be created in the `build/` directory.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## 🧪 Testing
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Run the test suite:
 
-## Learn More
+```bash
+yarn test
+# or
+npm test
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 📦 Key Dependencies
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **@orca-so/sdk**: Orca DEX SDK for token swaps
+- **@project-serum/serum**: Serum DEX protocol integration
+- **@solana/web3.js**: Solana JavaScript API
+- **@solana/wallet-adapter-react**: Wallet adapter framework
+- **@material-ui/core**: UI component library
+- **antd**: Additional UI components
+- **react**: JavaScript library for building user interfaces
+
+## 🔌 Supported Wallets
+
+- Phantom
+- Solflare
+- Slope
+- Torus
+- Ledger
+- Sollet
+- Bitpie
+- Blocto
+- Coin98
+- MathWallet
+- SafePal
+- Solong
+
+## 🌐 Network
+
+The application connects to Solana Mainnet by default using the Orca RPC endpoint.
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+
+## 🔗 Resources
+
+- [Solana Documentation](https://docs.solana.com/)
+- [Orca SDK](https://www.orca.so/)
+- [Serum DEX](https://www.projectserum.com/)
+- [Raydium Protocol](https://raydium.io/)
